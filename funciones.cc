@@ -33,6 +33,7 @@ void inicios(){
         std::cin>>opcion;
         switch (opcion){
             case 1:
+                
                 switch(login_admin()){
                     case 1:
                         menu_admin();
@@ -76,6 +77,7 @@ void menu_p(){
         std::cin>>opcion;
         switch (opcion){
             case 1:
+                opc2=0;
                 ver_listado_activos();
                 while(opc2!=2){
                     std::cout<<" 1.Inscribirse a un curso\n 2.Atras\n";
@@ -97,6 +99,7 @@ void menu_p(){
                 break;
 
             case 2:
+                opc3=0;
                 
                 while(opc3!=2){
                     ver_cursos_inscritos();
@@ -109,6 +112,7 @@ void menu_p(){
                             break;
                         
                         case 2:
+                    
                             break;
                         
                         default:
@@ -164,6 +168,7 @@ void menu_admin(){
                 break;
             
             case 3:
+                opc2=0;
                 ver_listado_completo();
                 while(opc2!=3){
                     std::cout<<" 1.Activar Curso\n 2.Desactivar Curso\n 3.Atras\n"; 
@@ -192,6 +197,7 @@ void menu_admin(){
                 }              
                 break;
             case 4:
+                    opc2=0;
                     while(opc2!=2){
                     ver_listado_activos();
                     std::cout<<" 1.Desactivar Curso\n 2.Atras\n"; 
@@ -217,7 +223,7 @@ void menu_admin(){
 
             case 5:
                 if(crear_curso()==false){
-                    std::cout<<"Ya existe ese curso\n";
+                    std::cout<<"\n";
                 }else{
                     std::cout<<"Curso creado con exito\n";
                 }
